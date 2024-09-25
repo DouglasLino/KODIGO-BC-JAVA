@@ -46,11 +46,11 @@ public class Burbuja {
             // Medimos el tiempo de finalización
             long fin = System.nanoTime();
 
-            // Calculamos el tiempo transcurrido en milisegundos ya que en el arreglo 1000000 se toma su tiempo
-            long tiempo = (fin - inicio) / 1000000;
+            // Calculamos el tiempo transcurrido en nanosegundos ya que en el arreglo 1000000 se toma su tiempo
+            long tiempo = (fin - inicio) ;
 
             // Mostramos los resultados
-            System.out.println("Tamaño del arreglo: " + tamanio + " - Tiempo de ordenamiento: " + tiempo + " ms");
+            System.out.println("Tamaño del arreglo: " + tamanio + " - Tiempo de ordenamiento: " + tiempo + " ns");
         }
     }
 
