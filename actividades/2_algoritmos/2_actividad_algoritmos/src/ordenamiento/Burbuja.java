@@ -7,7 +7,7 @@ public class Burbuja {
     // Método main idéntico al de búsqueda secuencial y binaria
     public static void main(String[] args) {
         // Configuramos los tamaños del arreglo para el benchmark
-        int[] tamanios = {1000, 10000, 100000, 1000000}; // Tamaños de los arreglos
+        int[] tamanios = {1000, 10000, 100000, 500000}; // Tamaños de los arreglos
 
         // Realizamos el benchmark para cada tamaño de arreglo
         System.out.println("======== BENCHMARK Ordenamiento Burbuja --- MEJOR DE LOS CASOS");

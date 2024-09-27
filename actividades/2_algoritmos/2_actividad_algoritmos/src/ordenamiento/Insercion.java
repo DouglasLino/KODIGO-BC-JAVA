@@ -5,7 +5,7 @@ public class Insercion {
         // Método main idéntico a los anteriores para el benchmark
     public static void main(String[] args) {
         // Configuramos los tamaños del arreglo para el benchmark
-        int[] tamanios = {1000, 10000, 100000}; // Tamaños de los arreglos (el de 1 millón puede tardar mucho en el peor caso)
+        int[] tamanios = {1000, 10000, 500000 }; // Tamaños de los arreglos (el de 1 millón puede tardar mucho en el peor caso)
 
         // Realizamos el benchmark para cada tamaño de arreglo
         System.out.println("======== BENCHMARK Ordenamiento por Inserción (Mejor Caso)");

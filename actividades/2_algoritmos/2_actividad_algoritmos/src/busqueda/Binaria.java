@@ -5,7 +5,7 @@ public class Binaria {
     public static void main(String[] args) {
         System.gc();  // Intenta forzar la recolección de basura después de liberar referencias
         // Configuramos los tamaños del arreglo para el benchmark
-        int[] tamanios = {1000, 10000, 100000, 1000000}; // Tamaños de los arreglos
+        int[] tamanios = {1000, 10000, 100000, 500000}; // Tamaños de los arreglos
 
         // Realizamos el benchmark para cada tamaño de arreglo
         System.out.println("======== BENCHMARK Busqueda Binaria --- MEJOR CASO");
