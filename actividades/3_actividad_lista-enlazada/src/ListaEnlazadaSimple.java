@@ -56,7 +56,7 @@ class ListaEnlazadaSimple {
     // Metodo para buscar un valor en la lista
     public boolean buscarValor(int valor) {
         Nodo temp = cabeza;
-        while (temp != null) {
+        while (temp != null) { // si la cabeza es igual a null, llegamos al final de la lista
             if (temp.dato == valor) {
                 return true;  // Se encontró el valor
             }
@@ -64,9 +64,6 @@ class ListaEnlazadaSimple {
         }
         return false;  // Si llegamos al final, el valor no está en la lista
     }
-
-
-
 
     // Método para imprimir la lista
     public void mostrar() {
@@ -77,6 +74,4 @@ class ListaEnlazadaSimple {
         }
         System.out.println("null");
     }
-
-//    Metodo para buscar
 }
