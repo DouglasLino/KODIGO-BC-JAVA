@@ -1,45 +1,49 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        // Crear una lista enlazada
         ListaEnlazadaSimple lista = new ListaEnlazadaSimple();
+        Scanner sc = new Scanner(System.in);
+        int opcion, dato, posicion;
 
-        // Agregar nodos al inicio
-        System.out.println("Agregando nodos al inicio:");
-        lista.agregarInicio(10);
-        lista.agregarInicio(20);
-        lista.agregarInicio(30);
-        lista.mostrar(); // Debe imprimir: 30 -> 20 -> 10 -> null
+        lista.insertarAlInicio(47);
+        lista.insertarAlInicio(2);
+        lista.insertarAlInicio(23);
 
-        // Agregar nodos al final
-        System.out.println("\nAgregando nodos al final:");
-        lista.agregarFinal(40);
-        lista.agregarFinal(50);
-        lista.mostrar(); // Debe imprimir: 30 -> 20 -> 10 -> 40 -> 50 -> null
+        do{
+            System.out.println("Lista Enlazada\nOpciones: ");
+            System.out.println("1) Insertar dato en cabecera");
+            System.out.println("2) Mostrar todos los datos");
+            System.out.println("3) Buscar posicion de un dato");
+            System.out.println("4) Borrar dato en cabecera");
+            System.out.println("5) Insertar dato en una posicion especifica");
+            System.out.println("6) Salir");
+            opcion = sc.nextInt();
 
-        // Eliminar nodo al inicio
-        System.out.println("\nEliminando el nodo al inicio:");
-        lista.eliminarInicio();
-        lista.mostrar(); // Debe imprimir: 20 -> 10 -> 40 -> 50 -> null
+            switch (opcion) {
+                case 1:
+                    System.out.println("Insertar dato de cabecera");
+                    dato = sc.nextInt(); lista.insertarAlInicio(dato); break;
+                case 2:
+                    lista.mostrarLista(); break;
+                case 3:
+                    System.out.println("Inserte el valor que busca: ");
+                    dato = sc.nextInt(); lista.busquedaLista(dato); break;
+                case 4:
+                    lista.eliminarAlInicio(); break;
+                case 5:
+                    System.out.println("Inserte el valor que desea insertar: ");
+                    dato = sc.nextInt();
+                    System.out.println("Inserte la posición en la que desea insertarlo: ");
+                    posicion = sc.nextInt();
+                    lista.insertarCualquierPosicion(dato, posicion); break;
+                case 6:
+                    System.out.println("Saliendo del programa...");
+                    break;
+                default:
+                    System.out.println("Opcion invalida");
+            }
+        }while (opcion != 6);
 
-        // Eliminar nodo al final
-        System.out.println("\nEliminando el nodo al final:");
-        lista.eliminarFinal();
-        lista.mostrar(); // Debe imprimir: 20 -> 10 -> 40 -> null
-
-        // Buscar un valor en la lista
-        System.out.println("\nBuscando valores:");
-        System.out.println("¿Está el valor 10 en la lista? " + (lista.buscarValor(10) ? "Sí" : "No")); // Debe imprimir: Sí
-        System.out.println("¿Está el valor 50 en la lista? " + (lista.buscarValor(50) ? "Sí" : "No")); // Debe imprimir: No
-
-        // Eliminar todos los nodos de la lista
-        System.out.println("\nEliminando todos los nodos:");
-        lista.eliminarInicio(); // Eliminar 20
-        lista.eliminarInicio(); // Eliminar 10
-        lista.eliminarInicio(); // Eliminar 40
-        lista.mostrar(); // Debe imprimir: null
-
-        // Intentar eliminar de una lista vacía
-        System.out.println("\nIntentando eliminar de una lista vacía:");
-        lista.eliminarFinal(); // Debe imprimir un mensaje de lista vacía
     }
 }

@@ -33,39 +33,3 @@ git clone https://github.com/DouglasLino/KODIGO-BC-JAVA/tree/main
 ├── Main.java
 └── Nodo.java
 ```
-
-5. Para ejecutar cada prueba, selecciona la clase y haz clic en el botón RUN.
-
-Al ejecutar el proyecto te mostrara todas la pruebas, las cuales son:
-
-- Agregando nodos al inicio
-- Agregando nodos al final
-- Eliminando el nodo al inicio
-- Buscando valores predefinidos
-- Eliminando todos los nodos
-- Intentando eliminar de una lista vacía:
-
-```plaintext
-Agregando nodos al inicio:
-30 -> 20 -> 10 -> null
-
-Agregando nodos al final:
-30 -> 20 -> 10 -> 40 -> 50 -> null
-
-Eliminando el nodo al inicio:
-20 -> 10 -> 40 -> 50 -> null
-
-Eliminando el nodo al final:
-20 -> 10 -> 40 -> null
-
-Buscando valores:
-¿Está el valor 10 en la lista? Sí
-¿Está el valor 50 en la lista? No
-
-Eliminando todos los nodos:
-null
-
-Intentando eliminar de una lista vacía:
-La lista está vacía, no se puede eliminar.
-
-```

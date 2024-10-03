@@ -1,77 +1,84 @@
-class ListaEnlazadaSimple {
-    Nodo cabeza;
+public class ListaEnlazadaSimple {
+Nodo cabeza = null;
 
-    public ListaEnlazadaSimple() {
-        cabeza = null;
+    void  insertarAlInicio (int dato){
+        Nodo nuevo = new Nodo(dato);
+        nuevo.siguiente = cabeza;
+        cabeza = nuevo;
     }
 
-//    Metodo para agregar un nodo al inicio de la lista
-    public void agregarInicio(int dato) {
-        Nodo nuevoNodo = new Nodo(dato);  // Crear el nuevo nodo
-        nuevoNodo.siguiente = cabeza;     // Hacer que apunte al nodo cabeza actual
-        cabeza = nuevoNodo;               // Actualizar cabeza para que apunte al nuevo nodo
+    void eliminarAlInicio(){
+        //Comprueba si no hay un valor en la cabezera
+        if(cabeza == null){
+            System.out.println("La cabeza de la lista esta vacia");
+        //de no haberlo el valor siguiente será la cabezera borrando el actual
+        }else{
+            Nodo nuevo = cabeza;
+            cabeza = nuevo.siguiente;
+            System.out.println("Dato borrado...");
+        }
     }
-
-    // Metodo para agregar un nodo al final de la lista
-    public void agregarFinal(int dato) {
-        Nodo nuevoNodo = new Nodo(dato);
-        if (cabeza == null) {
-            cabeza = nuevoNodo;
-        } else {
-            Nodo temp = cabeza;
-            while (temp.siguiente != null) {
-                temp = temp.siguiente;
+//recorre toda la lista y muestra cada dato hasta no quedar ninguno
+    void mostrarLista(){
+        Nodo actual = cabeza;
+        int posicion = 1;
+        //comprueba que la lista no este vacía, si no hay cabezera, no hay lista
+        if(cabeza == null){
+            System.out.println("La lista esta vacia");
+        }else {
+            while (actual != null) {
+                System.out.println(posicion + ". "+ actual.dato);
+                actual = actual.siguiente;
+                posicion++;
             }
-            temp.siguiente = nuevoNodo;
         }
     }
 
-    // Metodo para eliminar el nodo al inicio de la lista
-    public void eliminarInicio() {
-        if (cabeza == null) {
-            System.out.println("La lista está vacía, no se puede eliminar.");
-        } else {
-            cabeza = cabeza.siguiente;  // Mover la referencia de cabeza al siguiente nodo
+//Recorre toda la lista hasta encontrar el dato
+    void busquedaLista(int dato){
+        Nodo actual = cabeza;
+        int posicion = 1;
+
+        while (actual.dato != dato && actual.siguiente != null) {
+            posicion++;
+            actual = actual.siguiente;
+        }
+        //Si no existe siguiente dato y el actual no coincide entonces ya recorrio toda la lista sin encontrarlo
+        if(actual.siguiente == null && actual.dato != dato){
+            System.out.println("Dato no encontrado");
+        }else{
+            System.out.println("Dato: " + actual.dato + " En posicion: " + posicion);
         }
     }
 
-    // Metodo para eliminar el nodo al final de la lista
-    public void eliminarFinal() {
-        if (cabeza == null) {
-            System.out.println("La lista está vacía, no se puede eliminar.");
-        } else if (cabeza.siguiente == null) {
-            // Solo hay un nodo en la lista
-            cabeza = null;  // Eliminar el único nodo
-        } else {
-            Nodo temp = cabeza;
-            // Recorrer la lista hasta encontrar el penúltimo nodo
-            while (temp.siguiente.siguiente != null) {
-                temp = temp.siguiente;
-            }
-            // El penúltimo nodo ahora apunta a null, eliminando el último nodo
-            temp.siguiente = null;
+    void insertarCualquierPosicion(int dato, int posicionBuscada){
+        Nodo nuevo = new Nodo(dato);
+        int posicionActual = 1;
+
+        //La posicion 1 es el inicio de la lista por lo que para acceder se usa la función de insertar
+        if(posicionBuscada == 1){
+            insertarAlInicio(dato);
+            return;
         }
+        //Va a la cabeza de la lista para empezar a recorrerla
+        Nodo actual = cabeza;
+
+        //recorre la lista hasta estar una posicion antes de la buscada
+        while (actual != null && posicionActual < posicionBuscada - 1) {
+            actual = actual.siguiente;
+            posicionActual++;
+        }
+
+        if (actual == null){
+            System.out.println("Posicion inexistente");
+            return;
+        }
+
+        nuevo.siguiente = actual.siguiente;
+        actual.siguiente = nuevo;
+
     }
 
-    // Metodo para buscar un valor en la lista
-    public boolean buscarValor(int valor) {
-        Nodo temp = cabeza;
-        while (temp != null) { // si la cabeza es igual a null, llegamos al final de la lista
-            if (temp.dato == valor) {
-                return true;  // Se encontró el valor
-            }
-            temp = temp.siguiente;  // Mover al siguiente nodo
-        }
-        return false;  // Si llegamos al final, el valor no está en la lista
-    }
 
-    // Método para imprimir la lista
-    public void mostrar() {
-        Nodo temp = cabeza;
-        while (temp != null) {
-            System.out.print(temp.dato + " -> ");
-            temp = temp.siguiente;
-        }
-        System.out.println("null");
-    }
+
 }
