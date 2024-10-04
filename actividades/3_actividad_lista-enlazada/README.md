@@ -47,9 +47,9 @@ Al ejecutar el proyecto mostrará un menu donde se podrá interactuar con las di
 
 Para acceder a cada función tendrás que ingresar el número correpondiente a dicha función, en el siguiente ejemplo se muestra el funcionamiento de cada una de las funciones (el programa viene con 3 datos pre-insertados, 23, 2 y  47).
 
-Ejemplo de uso, donde se añadirá un "5" en el inicio de la lista y se mostra como esta la tabla actualemente, despues se buscara el valor "2" 
-en la tabla, seguido de hará uso de la función de Borrar para borrar el valor que está al inicio y despues se insertará un valor de "7" en la
-3ª posición de la tabla para finalmente mostrar toda la tabla con los cambios y finalizar el programa.  
+Ejemplo de uso, donde se añadirá un "5" en el inicio de la lista y se mostrará como está la tabla actualmente, despues se buscará el valor "2" 
+en la tabla, seguido, se hará uso de la función de Borrar para eliminar el valor que está al inicio, y despues se insertará un valor de "7" en la
+3ª posición de la tabla para finalmente mostrar toda la tabla con los cambios y finalizar el programa. 
 ```plaintext
 Lista Enlazada
 Opciones: 
