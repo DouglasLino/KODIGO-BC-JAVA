@@ -1,26 +1,15 @@
 // Patron creacional - Factory method
+
+/*
+Función: Interfaz común para todos los servicios de reserva (por ejemplo, hotel, vuelo).
+Responsabilidades:
+* Define el método reservar(), que será implementado por todas las clases de servicios concretos.
+ */
+
 public interface ServicioReserva {
     void reservar();
 }
 
-class ReservaHotel implements ServicioReserva {
-    public void reservar() {
-        System.out.println("Hotel reservado exitosamente.");
-    }
-}
 
-class ReservaVuelo implements ServicioReserva {
-    public void reservar() {
-        System.out.println("Vuelo reservado exitosamente.");
-    }
-}
 
-class FabricaServiciosReserva {
-    public static ServicioReserva crearServicio(String tipo) {
-        return switch (tipo) {
-            case "hotel" -> new ReservaHotel();
-            case "vuelo" -> new ReservaVuelo();
-            default -> throw new IllegalArgumentException("Tipo de servicio desconocido.");
-        };
-    }
-}
+

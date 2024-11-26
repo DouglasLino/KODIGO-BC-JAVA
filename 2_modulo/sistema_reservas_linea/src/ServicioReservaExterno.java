@@ -1,16 +1,14 @@
 // Patron Estructural - Adapter
+
+/*
+Función:
+* Establece un contrato para la implementación de servicios de reserva externos.
+
+Responsabilidad:
+* Garantizar que los servicios externos sigan un formato común
+ */
 public interface ServicioReservaExterno {
     void hacerReserva();
 }
 
-class AdaptadorSistemaExterno implements ServicioReserva {
-    private ServicioReservaExterno servicioExterno;
 
-    public AdaptadorSistemaExterno(ServicioReservaExterno servicioExterno) {
-        this.servicioExterno = servicioExterno;
-    }
-
-    public void reservar() {
-        servicioExterno.hacerReserva();
-    }
-}
