@@ -1,33 +1,49 @@
 # Implementación de Principios SOLID en un Proyecto
 
-
 ## Integrantes (proyecto individual)
-* Douglas Alfredo Lino Henriquez
 
+- Douglas Alfredo Lino Henriquez
 
 ## Diagrama de clases
-![Descripción de la imagen](https://raw.githubusercontent.com/DouglasLino/KODIGO-BC-JAVA/refs/heads/main/2_modulo/sistema_reservas_linea/img/diagrama-clases.png)
+
+![Descripción de la imagen](https://raw.githubusercontent.com/DouglasLino/KODIGO-BC-JAVA/refs/heads/main/2_modulo/principios_solid/img/1.png)
 
 ## Funcionamiento
 
 ### Menu principal
-Mustra las siguientes opciones
-  1. **Ingresar nueva reserva**: registra nuevas reservas, en las cuales se necesita:
-      * Nombre del cliente  
-      * Apellido del cliente  
-      * teléfono del cliente
-      * Tipo de servicio (hotel y/o vuelo)
-      * Añadir seguro (si o no)
-  2. **Mostrar todas las reservas existentes**: enlista todas las reservas que se han almacenado
-  3. **Salir**: termina la ejecucion del programa
 
-![Descripción de la imagen](https://raw.githubusercontent.com/DouglasLino/KODIGO-BC-JAVA/refs/heads/main/2_modulo/sistema_reservas_linea/img/menu.png)
+Mustra las siguientes opciones:
 
-### Opcion 1 - Ingresar nueva reserva
-![Descripción de la imagen](https://raw.githubusercontent.com/DouglasLino/KODIGO-BC-JAVA/refs/heads/main/2_modulo/sistema_reservas_linea/img/1.png)
-### Opcion 2 - Mostrar todas las reservas existentes
+![Descripción de la imagen](https://raw.githubusercontent.com/DouglasLino/KODIGO-BC-JAVA/refs/heads/main/2_modulo/principios_solid/img/2.png)
 
-![Descripción de la imagen](https://raw.githubusercontent.com/DouglasLino/KODIGO-BC-JAVA/refs/heads/main/2_modulo/sistema_reservas_linea/img/2.png)
-### Opcion 2 - Salir
+### Opcion 1 - Agregar usuario
 
-![Descripción de la imagen](https://raw.githubusercontent.com/DouglasLino/KODIGO-BC-JAVA/refs/heads/main/2_modulo/sistema_reservas_linea/img/3.png)
+![Descripción de la imagen](https://raw.githubusercontent.com/DouglasLino/KODIGO-BC-JAVA/refs/heads/main/2_modulo/principios_solid/img/3.png)
+
+### Opcion 2 - Eliminar usuario
+
+![Descripción de la imagen](https://raw.githubusercontent.com/DouglasLino/KODIGO-BC-JAVA/refs/heads/main/2_modulo/principios_solid/img/4.png)
+
+### Opcion 3 - Agregar proyecto
+
+![Descripción de la imagen](https://raw.githubusercontent.com/DouglasLino/KODIGO-BC-JAVA/refs/heads/main/2_modulo/principios_solid/img/5.png)
+
+### Opcion 4 - Eliminar proyecto
+
+![Descripción de la imagen](https://raw.githubusercontent.com/DouglasLino/KODIGO-BC-JAVA/refs/heads/main/2_modulo/principios_solid/img/6.png)
+
+### Opcion 5 - Crear tarea
+
+![Descripción de la imagen](https://raw.githubusercontent.com/DouglasLino/KODIGO-BC-JAVA/refs/heads/main/2_modulo/principios_solid/img/7.png)
+
+### Opcion 6 - Mostrar tareas pendientes
+
+![Descripción de la imagen](https://raw.githubusercontent.com/DouglasLino/KODIGO-BC-JAVA/refs/heads/main/2_modulo/principios_solid/img/8.png)
+
+### Opcion 7 - Completar tarea
+
+![Descripción de la imagen](https://raw.githubusercontent.com/DouglasLino/KODIGO-BC-JAVA/refs/heads/main/2_modulo/principios_solid/img/9.png)
+
+### Opcion 0 - Salir
+
+![Descripción de la imagen](https://raw.githubusercontent.com/DouglasLino/KODIGO-BC-JAVA/refs/heads/main/2_modulo/principios_solid/img/10.png)
